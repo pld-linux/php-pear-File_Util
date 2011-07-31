@@ -1,19 +1,19 @@
+%define		status		alpha
+%define		pearname	File_Util
 %include	/usr/lib/rpm/macros.php
-%define		_status		alpha
-%define		_pearname	File_Util
-%define		subver	alpha1
-%define		rel		1
-Summary:	%{_pearname} - Common file and directory utility functions
-Name:		php-pear-%{_pearname}
+Summary:	%{pearname} - Common file and directory utility functions
+Name:		php-pear-%{pearname}
 Version:	1.0.0
-Release:	0.%{subver}.%{rel}
+Release:	1
 License:	PHP
 Group:		Development/Languages/PHP
-Source0:	http://pear.php.net/get/%{_pearname}-%{version}%{subver}.tgz
-# Source0-md5:	32e7f40a0eb1a550ca61372b2c3a3dfe
+Source0:	http://pear.php.net/get/%{pearname}-%{version}.tgz
+# Source0-md5:	3861d4bf90f2add2572ed1b6a602c655
 URL:		http://pear.php.net/package/File_Util/
-BuildRequires:	php-pear-PEAR
+BuildRequires:	php-pear-PEAR >= 1:1.7.0
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
+BuildRequires:	rpmbuild(macros) >= 1.580
+Requires:	php-pcre
 Requires:	php-pear
 Requires:	php-pear-File >= 1.4.0-0.alpha1
 Requires:	php-pear-PEAR-core >= 1:1.7.0
@@ -24,7 +24,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Common file and directory utility functions. Path handling, temp
 dir/file, sorting of files, listDirs, isIncludable and more
 
-In PEAR status of this package is: %{_status}.
+In PEAR status of this package is: %{status}.
 
 %prep
 %pear_package_setup
