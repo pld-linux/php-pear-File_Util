@@ -1,6 +1,5 @@
 %define		status		alpha
 %define		pearname	File_Util
-%include	/usr/lib/rpm/macros.php
 Summary:	%{pearname} - Common file and directory utility functions
 Name:		php-pear-%{pearname}
 Version:	1.0.0
